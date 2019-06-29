@@ -1,19 +1,39 @@
-
-#Rita222
 import random
+import SCP
+class SubSet:
+    subSet = list()
+    subSetCost = 0
+    scp = SCP.SCP()
+    def __init__(self, subSetCost):
+        subset = set()
+        sizeOfSubset = random.randrange(1,scp.sizeOfUniversal)
+        for j in range(sizeOfSubset):
+            subset.add(random.randrange(1,scp.sizeOfUniversal))
+        self.subSetCost = subSetCost
+
+
+        
+        
+
+        
+    
 class SCP:
-      def __init__(self,sizeOfUniversal,countOfSubsets):
+    list_subsetCost = list()
+    sizeOfUniversal = 0
+    countOfSubsets = 0
+    def __init__(self,sizeOfUniversal,countOfSubsets,list_subsetCost):
+          self.list_subsetCost = list_subsetCost
           self.sizeOfUniversal = sizeOfUniversal
           self.countOfSubsets = countOfSubsets
-          universal = set()
-          set_notCovered = set()
-          list_subsets = list()
+          self.universal = set()
+          self.set_notCovered = set()
+          self.list_subsets = list()
           for i in range(sizeOfUniversal):
-              universal.add(i+1)
-          unionOfsubsets = self.Init_Subsets(sizeOfUniversal,countOfSubsets,list_subsets)
-          set_notCovered = universal - unionOfsubsets
+              self.universal.add(i+1)
+          unionOfsubsets = self.Init_Subsets(sizeOfUniversal,countOfSubsets,self.list_subsets)
+          set_notCovered = self.universal - unionOfsubsets
           if(set_notCovered.__len__() != 0):
-             self.listOfSubsets = self.Prepare_Subsets(set_notCovered,list_subsets)
+             self.listOfSubsets = self.Prepare_Subsets(set_notCovered,self.list_subsets)
           
 
       def Init_Subsets(self,sizeOfUniversal,countOfSubsets,list_subsets):
