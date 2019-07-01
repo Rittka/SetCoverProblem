@@ -9,8 +9,7 @@ class Population:
           listOfGene = self.list_Gene
           self.numOfSubsets = numOfSubSets
           for i in range(numOfChromosomes):
-             
-          list_validChromosome = self.ValidChromosome(numOfUni,numOfChromosomes, numOfSubSets,listofChromosome)
+              list_validChromosome = self.ValidChromosome(numOfUni,numOfChromosomes, numOfSubSets,listofChromosome)
           
 
 
@@ -29,4 +28,4 @@ class Population:
                   listOfChromosome.remove(invalidChromosome)
           return listOfChromosome
 
-      def PrepareInvalidChromosome()
+     # def PrepareInvalidChromosome()

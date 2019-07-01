@@ -36,7 +36,7 @@ class SCP:
              self.listOfSubsets = self.Prepare_Subsets(set_notCovered,self.list_subsets)
           
 
-      def Init_Subsets(self,sizeOfUniversal,countOfSubsets,list_subsets):
+    def Init_Subsets(self,sizeOfUniversal,countOfSubsets,list_subsets):
           unionSbset = set()
           for i in range(countOfSubsets):
               subset = set()
@@ -47,7 +47,7 @@ class SCP:
               unionSbset = unionSbset|subset
           return unionSbset    
 
-      def Prepare_Subsets(self,set_notCovered,list_subsets):
+    def Prepare_Subsets(self,set_notCovered,list_subsets):
           for i in set_notCovered:
               countOfSomeSets = random.randrange(1,list_subsets.__len__())
               for j in range(countOfSomeSets):

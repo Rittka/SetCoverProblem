@@ -14,8 +14,7 @@ class Chromosome:
             self.list_Gene.append(random.choice([0,1]))
 
 
-
-
+ 
 
 
   
